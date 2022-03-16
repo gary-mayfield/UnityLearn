@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class FollowPlayer1 : MonoBehaviour
 {
     public GameObject player;
     private Vector3 thirdPersonOffset = new Vector3(0, 6, -11);
