@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     public float speed = 10.0f;
-    public float range = 12.0f;
+    public float range = 15.0f;
     public GameObject leftBorder;
     public GameObject rightBorder;
 
