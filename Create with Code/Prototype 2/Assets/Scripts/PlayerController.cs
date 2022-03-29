@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float range = 15.0f;
     public GameObject leftBorder;
     public GameObject rightBorder;
+    public GameObject projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,16 @@ public class PlayerController : MonoBehaviour
         var leftBound = leftBorder.transform.position.x + range;
         var rightBound = rightBorder.transform.position.x - range;
 
+        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
         if(transform.position.x > rightBound)
             transform.position = new Vector3(rightBound, transform.position.y, transform.position.z);
 
         if(transform.position.x < leftBound)
             transform.position = new Vector3(leftBound, transform.position.y, transform.position.z);
-
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+            // Launch a projectile from the player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
     }
 }
