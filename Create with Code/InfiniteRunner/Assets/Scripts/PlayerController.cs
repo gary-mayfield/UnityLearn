@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +8,41 @@ public class PlayerController : MonoBehaviour
 {
     public Vector3 initalPosition;    
     bool isOnGround;
+    GameObject PauseButton, ExitButton, ResumeButton, GamePausedText;
+    public bool paused;
 
     // Start is called before the first frame update
     void Start()
     {
+        paused = false;
         initalPosition = transform.position;
+        GamePausedText = GameObject.Find("GamePaused");
+        ResumeButton = GameObject.Find("ResumeButton");
+        ExitButton = GameObject.Find("ExitButton");
+        PauseButton = GameObject.Find("PauseButton");
+        DisplayPauseButtons(false);
+    }
+
+    void DisplayPauseButtons(bool state)
+    {
+        PauseButton.SetActive(!state);
+        ExitButton.SetActive(state);
+        ResumeButton.SetActive(state);
+        ExitButton.SetActive(state);
+        GamePausedText.SetActive(state);
+    }
+
+    public void Pause()
+    {
+        paused = true;
+        DisplayPauseButtons(true);
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        DisplayPauseButtons(false);
     }
 
     // Update is called once per frame

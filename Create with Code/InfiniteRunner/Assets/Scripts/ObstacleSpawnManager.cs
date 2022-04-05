@@ -34,8 +34,8 @@ public class ObstacleSpawnManager : MonoBehaviour
 
     void AddObstacle()
     {
-        Vector3 positionOfPlayer = GameObject.Find("Player").GetComponent<PlayerController>().initalPosition;
-        float randomNumber = Random.Range(1, 5);
+        Vector3 positionOfPlayer = GameObject.Find("Player").GetComponent<PlayerController>().initalPosition + Vector3.down * 1f;
+        float randomNumber = Random.Range(1, 4);
 
         for (int i = 0; i <= randomNumber; i++)
         {
