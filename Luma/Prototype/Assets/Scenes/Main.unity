@@ -3552,6 +3552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b85aaa93e70d84a992bdf23458ea45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoint: 0
+  maxHitPoint: 0
+  pushRecoverySpeed: 0.2
 --- !u!212 &955305894
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3629,6 +3632,7 @@ GameObject:
   - component: {fileID: 1238301301}
   - component: {fileID: 1238301300}
   - component: {fileID: 1238301299}
+  - component: {fileID: 1238301302}
   m_Layer: 9
   m_Name: enemy_0
   m_TagString: Fighter
@@ -3727,6 +3731,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238301302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238301298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5330a9b165206ff419ad6e3dfc5982e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoint: 10
+  maxHitPoint: 10
+  pushRecoverySpeed: 0.2
 --- !u!1 &1369253129
 GameObject:
   m_ObjectHideFlags: 0
