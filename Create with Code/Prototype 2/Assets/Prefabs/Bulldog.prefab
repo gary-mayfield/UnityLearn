@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1755097838780573282}
   - component: {fileID: 1755097837132396402}
   - component: {fileID: -283127219078813399}
+  - component: {fileID: 6572141699345558641}
   m_Layer: 0
   m_Name: Bulldog
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8db03d49fe1314d85d26ca1507dcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6572141699345558641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755097838770980062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.17178535, y: 0.2334509, z: 0.2875617}
+  m_Center: {x: 0.0021239794, y: 0.0924168, z: 0.032680426}
 --- !u!1 &1755097838770980636
 GameObject:
   m_ObjectHideFlags: 0
